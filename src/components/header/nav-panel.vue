@@ -8,7 +8,7 @@
         <div class="nav-panel__container container">
             <div class="nav-panel__row">
                 <div v-if="layout === 'compact'" class="nav-panel__logo">
-                    <AppLink to="/">
+                <AppLink to="/">
                     <img :src="LogoPng" alt="Logo" />
                 </AppLink>
                 </div>

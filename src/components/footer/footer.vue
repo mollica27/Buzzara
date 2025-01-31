@@ -4,38 +4,31 @@
             <div class="site-footer__widgets">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4">
-                        <footer-contacts />
+                        <footer-newsletter />
                     </div>
                     <div class="col-6 col-md-3 col-lg-2">
                         <footer-links
-                            title="Information"
+                            title="Informações"
                             :links="[
-                                {title: 'About Us', url: ''},
-                                {title: 'Delivery Information', url: ''},
-                                {title: 'Privacy Policy', url: ''},
-                                {title: 'Brands', url: ''},
-                                {title: 'Contact Us', url: ''},
-                                {title: 'Returns', url: ''},
-                                {title: 'Site Map', url: ''}
+                                {title: 'Sobre', url: ''},
+                                {title: 'Politicas de Privacidade', url: ''},
+                                {title: 'Suporte', url: ''},
                             ]"
                         />
                     </div>
                     <div class="col-6 col-md-3 col-lg-2">
                         <footer-links
-                            title="My Account"
+                            title="Minha conta"
                             :links="[
-                                {title: 'Store Location', url: ''},
+                                {title: 'localização', url: ''},
                                 {title: 'Order History', url: ''},
-                                {title: 'Wish List', url: ''},
-                                {title: 'Newsletter', url: ''},
-                                {title: 'Specials', url: ''},
-                                {title: 'Gift Certificates', url: ''},
-                                {title: 'Affiliate', url: ''}
+                                {title: 'Afiliado', url: ''}
                             ]"
                         />
                     </div>
                     <div class="col-12 col-md-12 col-lg-4">
-                        <footer-newsletter />
+                        <footer-contacts />
+                        
                     </div>
                 </div>
             </div>
@@ -43,8 +36,7 @@
             <div class="site-footer__bottom">
                 <div class="site-footer__copyright">
                     <!-- copyright -->
-                    Powered by <a href="https://vuejs.org/" target="_blank">Vue.js</a> —
-                    Design by <a :href="theme.author.profile_url" target="_blank">{{ theme.author.name }}</a>
+                    Desenvolvido por <a href="" target="_blank">Buzzara</a>
                     <!-- copyright / end -->
                 </div>
                 <div class="site-footer__payments">

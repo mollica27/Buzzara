@@ -31,6 +31,13 @@
 .footer-newsletter__form-input {
     min-width: 0;
 }
+
+.footer-newsletter img {
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
 .footer-newsletter__form-button {
     @include direction {
         #{$margin-inline-start}: 6px;
