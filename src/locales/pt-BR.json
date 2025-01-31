@@ -1,0 +1,20 @@
+{
+  "header": {
+      "topbar": {
+          "aboutUs": "Sobre Nós",
+          "contacts": "Contatos",
+          "storeLocation": "Localização da Loja",
+          "trackOrder": "Rastrear Pedido",
+          "blog": "Blog",
+          "myAccount": "Minha Conta",
+          "currency": "Moeda",
+          "language": "Idioma"
+      }
+  },
+  "footer": {
+      "contactUs": "Fale Conosco"
+  },
+  "general": {
+      "welcome": "Bem-vindo ao nosso site!"
+  }
+}
