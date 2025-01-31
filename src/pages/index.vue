@@ -141,7 +141,7 @@ async function loadColumns (shopApi: ShopApi) {
     },
     head () {
         return {
-            title: 'Home Page One'
+            title: 'Home'
         }
     }
 })
