@@ -1,24 +1,23 @@
 <template>
     <div>
-        <BlockSlideshow layout="full" />
+        <BlockSlideshow layout="with-departments" />
 
-        <BlockFeatures layout="boxed" />
+        <BlockFeatures />
 
         <BlockProductsCarouselContainer
             v-slot="{ products, isLoading, tabs, handleTabChange }"
             :tabs="[
-                { id: 1, name: 'Todos', categorySlug: undefined },
-                { id: 2, name: 'Garotas', categorySlug: 'Garotas' },
-                { id: 3, name: 'Homens', categorySlug: 'Homens' },
-                { id: 4, name: 'Trans', categorySlug: 'Trans' }
+                { id: 1, name: 'All', categorySlug: undefined },
+                { id: 2, name: 'Power Tools', categorySlug: 'power-tools' },
+                { id: 3, name: 'Hand Tools', categorySlug: 'hand-tools' },
+                { id: 4, name: 'Plumbing', categorySlug: 'plumbing' }
             ]"
             :initial-data="featuredProducts"
             :data-source="featuredProductsSource"
         >
             <BlockProductsCarousel
                 title="Featured Products"
-                layout="grid-5"
-                :rows="2"
+                layout="grid-4"
                 :products="products"
                 :loading="isLoading"
                 :groups="tabs"
@@ -30,31 +29,32 @@
 
         <BlockProducts
             title="Bestsellers"
-            layout="large-last"
+            layout="large-first"
             :featured-product="(bestsellers || [])[0]"
             :products="(bestsellers || []).slice(1, 7)"
         />
 
         <BlockCategories
             title="Popular Categories"
-            layout="compact"
+            layout="classic"
             :categories="categories"
         />
 
         <BlockProductsCarouselContainer
             v-slot="{ products, isLoading, tabs, handleTabChange }"
             :tabs="[
-                { id: 1, name: 'Todos', categorySlug: undefined },
-                { id: 2, name: 'Garotas', categorySlug: 'Garotas' },
-                { id: 3, name: 'Homens', categorySlug: 'Homens' },
-                { id: 4, name: 'Trans', categorySlug: 'Trans' }
+                { id: 1, name: 'All', categorySlug: undefined },
+                { id: 2, name: 'Power Tools', categorySlug: 'power-tools' },
+                { id: 3, name: 'Hand Tools', categorySlug: 'hand-tools' },
+                { id: 4, name: 'Plumbing', categorySlug: 'plumbing' }
             ]"
             :initial-data="latestProducts"
             :data-source="latestProductsSource"
         >
             <BlockProductsCarousel
                 title="New Arrivals"
-                layout="grid-5"
+                layout="horizontal"
+                :rows="2"
                 :products="products"
                 :loading="isLoading"
                 :groups="tabs"
@@ -64,13 +64,13 @@
 
         <BlockPosts
             title="Latest News"
-            layout="grid-3"
+            layout="list"
             :posts="posts"
         />
 
         <BlockBrands />
 
-        <BlockProductColumns :columns="columns || []" />
+        <BlockProductColumns :columns="columns" />
     </div>
 </template>
 
@@ -123,14 +123,13 @@ async function loadColumns (shopApi: ShopApi) {
         BlockProductColumns
     },
     async asyncData (context: Context) {
-        context.store.commit('options/setHeaderLayout', 'compact')
+        context.store.commit('options/setHeaderLayout', 'default')
         context.store.commit('options/setDropcartType', 'dropdown')
 
-        const shopApi = context.app.$shopApi as ShopApi;
-        const featuredProducts = runOnlyOnServer(() => shopApi.getFeaturedProducts({ limit: 12 }), null)
-        const bestsellers = runOnlyOnServer(() => shopApi.getPopularProducts({ limit: 7 }), null)
-        const latestProducts = runOnlyOnServer(() => shopApi.getLatestProducts({ limit: 8 }), null)
-        const columns = runOnlyOnServer(() => loadColumns(shopApi), null)
+        const featuredProducts = runOnlyOnServer(() => context.$shopApi.getFeaturedProducts({ limit: 8 }), null)
+        const bestsellers = runOnlyOnServer(() => context.$shopApi.getPopularProducts({ limit: 7 }), null)
+        const latestProducts = runOnlyOnServer(() => context.$shopApi.getLatestProducts({ limit: 8 }), null)
+        const columns = runOnlyOnServer(() => loadColumns(context.$shopApi), null)
 
         return {
             featuredProducts: await featuredProducts,
@@ -145,7 +144,7 @@ async function loadColumns (shopApi: ShopApi) {
         }
     }
 })
-export default class Page extends Vue {
+export default class HomePageOne extends Vue {
     featuredProducts: IProduct[] | null = []
 
     bestsellers: IProduct[] | null = []
@@ -160,23 +159,23 @@ export default class Page extends Vue {
 
     mounted () {
         if (this.bestsellers === null) {
-            (this.$nuxt.context.app.$shopApi as ShopApi).getPopularProducts({ limit: 7 }).then((products) => {
+            this.$shopApi.getPopularProducts({ limit: 7 }).then((products) => {
                 this.bestsellers = products
             })
         }
         if (this.columns === null) {
-            loadColumns(this.$nuxt.context.app.$shopApi as ShopApi).then((columns) => {
+            loadColumns(this.$shopApi).then((columns) => {
                 this.columns = columns
             })
         }
     }
 
     featuredProductsSource (tab: {categorySlug: string}): Promise<IProduct[]> {
-        return (this.$nuxt.context.app.$shopApi as ShopApi).getFeaturedProducts({ limit: 12, category: tab.categorySlug })
+        return this.$shopApi.getFeaturedProducts({ limit: 8, category: tab.categorySlug })
     }
 
     latestProductsSource (tab: {categorySlug: string}): Promise<IProduct[]> {
-        return (this.$nuxt.context.app.$shopApi as ShopApi).getLatestProducts({ limit: 8, category: tab.categorySlug })
+        return this.$shopApi.getLatestProducts({ limit: 8, category: tab.categorySlug })
     }
 }
 

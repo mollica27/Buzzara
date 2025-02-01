@@ -25,6 +25,12 @@
     justify-content: center;
     color: $header-logo-color;
 
+.logo-header {
+    display: flex;
+    width: 300px;
+    height: 80px;
+}
+
     @include direction {
         #{$margin-inline-end}: 30px;
     }

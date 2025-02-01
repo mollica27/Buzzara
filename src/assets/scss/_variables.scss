@@ -116,19 +116,19 @@
 // -- colors
 // ----------------------------------------
    // light
-   $light-color:                    #ffffff                  !default;
-   $light-opposite-color:           #111010               !default;
-   $light-opposite-muted-color:     #141414                  !default;
-   $light-opposite-alt-color:       #020202               !default;
-   $light-divider-color:            #575555               !default;
+   $light-color:                    #3D433F              !default;
+   $light-opposite-color:           #DADADA               !default;
+   $light-opposite-muted-color:     #DADADA               !default;
+   $light-opposite-alt-color:       #DADADA               !default;
+   $light-divider-color:            #DADADA               !default;
    // dark
-   $dark-color:                     $light-opposite-color !default;
-   $dark-opposite-color:            $light-color          !default;
+   $dark-color:                     $light-opposite-color   !default;
+   $dark-opposite-color:            $light-color            !default;
    // accent
-   $accent-color:                   #3332327c               !default;
-   $accent-opposite-color:          $light-opposite-color !default;
+   $accent-color:                   #3D433F           !default;
+   $accent-opposite-color:          $light-opposite-color   !default;
    //links
-   $link-color:                     #c6d81f               !default;
+   $link-color:                     #FED13C             !default;
    $link-hover-color:               #e0dd10               !default;
 
 
@@ -163,8 +163,8 @@
 // -- body
 // ----------------------------------------
    $body-bg:               $light-color                !default;
-   $body-font-color:      #2c2b2b                    !default;
-   $body-font-muted-color: #2c2b2b                   !default;
+   $body-font-color:       #DADADA                    !default;
+   $body-font-muted-color: #DADADA                   !default;
    $body-font-alt-color:   $light-opposite-alt-color   !default;
    $body-font-family:      'Roboto', 'sans-serif'      !default;
    $body-font-size:        16px                        !default;
@@ -216,7 +216,7 @@
       $header-search-border-radius:                  3px                                                       !default;
       // input default
       $header-search-input-default-bg:               transparent                                               !default;
-      $header-search-input-default-border-color:     #e5e5e5                                                   !default;
+      $header-search-input-default-border-color:     #DADADA                                                   !default;
       $header-search-input-default-shadow:           0 0 0 2px $header-search-input-default-border-color inset !default;
       $header-search-input-default-placeholder:      #999                                                      !default;
       $header-search-input-default-font-color:       inherit                                                   !default;
@@ -249,12 +249,12 @@
    // -- .search--location--indicator
    // ----------------------------------------
       $indicator-search-bg:                           $light-color                !default;
-      $indicator-search-font-color:                   $light-opposite-color       !default;
+      $indicator-search-font-color:                   #DADADA       !default;
       $indicator-search-shadow:                       0 1px 15px rgba(#000, .25)  !default;
-      $indicator-search-button-default-color:         #bfbfbf                     !default;
+      $indicator-search-button-default-color:         $light-color                     !default;
       $indicator-search-button-hover-color:           $light-opposite-color       !default;
       // suggestion
-      $indicator-search-suggestions-divider-color:    #ebebeb                     !default;
+      $indicator-search-suggestions-divider-color:    #DADADA                     !default;
       $indicator-search-suggestions-font-color:       $light-opposite-color       !default;
       $indicator-search-suggestions-muted-font-color: $light-opposite-muted-color !default;
       $indicator-search-suggestions-item-hover-bg:    rgba(#000, .03)             !default;
@@ -263,21 +263,21 @@
    // -- .search--location--mobile-header
    // ----------------------------------------
       // search input default
-      $mobile-header-search-input-default-bg:               rgba(#fff, .5)                                       !default;
+      $mobile-header-search-input-default-bg:               rgba(#DADADA, .5)                                       !default;
       $mobile-header-search-input-default-shadow:           none                                                 !default;
       $mobile-header-search-input-default-placeholder:      rgba(#000, .7)                                       !default;
       $mobile-header-search-input-default-font-color:       inherit                                              !default;
       $mobile-header-search-input-default-icon-color:       rgba(#000, .3)                                       !default;
       $mobile-header-search-input-default-icon-hover-color: $accent-opposite-color                               !default;
       // search input hover
-      $mobile-header-search-input-hover-bg:                 rgba(#fff, .8)                                       !default;
+      $mobile-header-search-input-hover-bg:                 rgba(#DADADA, .8)                                       !default;
       $mobile-header-search-input-hover-shadow:             $mobile-header-search-input-default-shadow           !default;
       $mobile-header-search-input-hover-placeholder:        $mobile-header-search-input-default-placeholder      !default;
       $mobile-header-search-input-hover-font-color:         $mobile-header-search-input-default-font-color       !default;
       $mobile-header-search-input-hover-icon-color:         $mobile-header-search-input-default-icon-color       !default;
       $mobile-header-search-input-hover-icon-hover-color:   $mobile-header-search-input-default-icon-hover-color !default;
       // search input focus
-      $mobile-header-search-input-focus-bg:                 #fff                                                 !default;
+      $mobile-header-search-input-focus-bg:                 #DADADA                                                 !default;
       $mobile-header-search-input-focus-shadow:             0 1px 5px rgba(#000, .2)                             !default;
       $mobile-header-search-input-focus-placeholder:        #999                                                 !default;
       $mobile-header-search-input-focus-font-color:         $mobile-header-search-input-hover-font-color         !default;
@@ -292,7 +292,7 @@
       // ----------------------------------------
       // -- offcanvas-search
       // ----------------------------------------
-         $offcanvas-search-bg:                   #fff                      !default;
+         $offcanvas-search-bg:                   #DADADA                      !default;
          $offcanvas-search-shadow:               0 1px 7px rgba(#000, .25) !default;
          $offcanvas-search-divider-color:        #ebebeb                   !default;
          $offcanvas-search-placeholder-color:    #999                      !default;
@@ -302,7 +302,7 @@
    // ----------------------------------------
    // -- .nav-panel, .mobile-header
    // ----------------------------------------
-      $nav-panel-bg:           $accent-color                                                                   !default;
+      $nav-panel-bg:           $light-color                                                                   !default;
       $nav-panel-shadow:       0 1px rgba(#000, .04), inset 0 -1px rgba(#000, .04)                             !default;
       $nav-panel-stuck-shadow: 0 1px rgba(#000, .04), inset 0 -1px rgba(#000, .04), 0 1px 20px rgba(#000, .15) !default;
       $nav-panel-font-color:   $accent-opposite-color                                                          !default;
@@ -334,7 +334,7 @@
       $nav-links-item-default-font-color:  inherit                                    !default;
       $nav-links-item-default-arrow-color: rgba(#000, .3)                             !default;
       // hover
-      $nav-links-item-hover-bg:            rgba(#fff, .5)                             !default;
+      $nav-links-item-hover-bg:            rgba(#DADADA, .5)                             !default;
       $nav-links-item-hover-shadow:        $nav-links-item-default-shadow             !default;
       $nav-links-item-hover-font-color:    $nav-links-item-default-font-color         !default;
       $nav-links-item-hover-arrow-color:   $nav-links-item-default-arrow-color        !default;
@@ -362,14 +362,14 @@
       $mobile-header-menu-button-border-radius:             2px                                                  !default;
       $mobile-header-menu-button-default-bg:                transparent                                          !default;
       $mobile-header-menu-button-default-color:             $nav-panel-font-color                                !default;
-      $mobile-header-menu-button-hover-bg:                  rgba(#fff, .5)                                       !default;
+      $mobile-header-menu-button-hover-bg:                  rgba(#DADADA, .5)                                       !default;
       $mobile-header-menu-button-hover-color:               $mobile-header-menu-button-default-color             !default;
 
    // ----------------------------------------
    // -- .mobilemenu
    // ----------------------------------------
       $mobilemenu-backdrop-bg:                $dark-color             !default;
-      $mobilemenu-bg:                         #fff                    !default;
+      $mobilemenu-bg:                         #DADADA                    !default;
       $mobilemenu-divider-color:              #ebebeb                 !default;
       $mobilemenu-header-height:              $nav-panel-height       !default;
       $mobilemenu-font-color:                 $light-opposite-color   !default;
@@ -504,9 +504,9 @@
    // ----------------------------------------
    // -- .alert
    // ----------------------------------------
-      $alert-link-default-bg:            rgba(#fff, .5)  !default;
-      $alert-link-hover-bg:              rgba(#fff, .85) !default;
-      $alert-link-active-bg:             rgba(#fff, .5)  !default;
+      $alert-link-default-bg:            rgba(#DADADA, .5)  !default;
+      $alert-link-hover-bg:              rgba(#DADADA, .85) !default;
+      $alert-link-active-bg:             rgba(#DADADA, .5)  !default;
       // close button
       $alert-close-button-default-bg:    transparent     !default;
       $alert-close-button-default-color: rgba(#000, .3)  !default;
@@ -527,7 +527,7 @@
    // -- .block-header
    // ----------------------------------------
       $block-header-divider-size:          2px                                       !default;
-      $block-header-divider-color:         #dadd1c                                   !default;
+      $block-header-divider-color:         #FED13C                                   !default;
 
       $block-header-filter-default-shadow: none                                      !default;
       $block-header-filter-hover-shadow:   0 0 0 2px #ebebeb inset                   !default;
@@ -612,9 +612,9 @@
    // -- .input-check
    // ----------------------------------------
       // normal
-      $input-check-box-bg:              #fff                            !default;
+      $input-check-box-bg:              #DADADA                            !default;
       $input-check-box-shadow:          0 0 0 1px rgba(#000, .15) inset !default;
-      $input-check-icon-color:          #fff                            !default;
+      $input-check-icon-color:          #DADADA                            !default;
       // checked
       $input-check-checked-box-bg:      $accent-color                   !default;
       $input-check-checked-box-shadow:  0 0 0 1px rgba(#000, .05) inset !default;
@@ -628,7 +628,7 @@
    // -- .input-check-color
    // ----------------------------------------
       $input-check-color-stick-color:       rgba(#666, .9)          !default;
-      $input-check-color-arrow-light-color: #fff                    !default;
+      $input-check-color-arrow-light-color: #DADADA                    !default;
       $input-check-color-arrow-dark-color:  #3d464d                 !default;
       $input-check-color-white-shadow:      0 0 0 2px #d9d9d9 inset !default;
       $input-check-color-white-arrow-color: #bfbfbf                 !default;
@@ -637,9 +637,9 @@
    // -- .input-radio
    // ----------------------------------------
       // normal
-      $input-radio-circle-bg:                   #fff                            !default;
+      $input-radio-circle-bg:                   #DADADA                            !default;
       $input-radio-circle-shadow:               0 0 0 1px rgba(#000, .17) inset !default;
-      $input-radio-inner-circle-color:          #fff                            !default;
+      $input-radio-inner-circle-color:          #DADADA                            !default;
       // checked
       $input-radio-checked-circle-bg:           $accent-color                   !default;
       $input-radio-checked-circle-shadow:       0 0 0 1px rgba(#000, .08) inset !default;
@@ -654,7 +654,7 @@
    // ----------------------------------------
       $input-radio-color-stick-color:        rgba(#000, .3) !default;
       $input-radio-color-white-border-color: #ccc           !default;
-      $input-radio-color-inner-circle-color: #fff           !default;
+      $input-radio-color-inner-circle-color: #DADADA           !default;
 
    // ----------------------------------------
    // -- .input-radio-label
@@ -725,7 +725,7 @@
    // ----------------------------------------
    // -- .product-card
    // ----------------------------------------
-      $product-card-bg:                      #fff                                     !default;
+      $product-card-bg:                      #DADADA                                     !default;
       $product-card-border-radius:           2px                                      !default;
       $product-card-divider-color:           #ebebeb                                  !default;
       $product-card-font-alt-color:          $light-opposite-alt-color                !default;
@@ -735,11 +735,11 @@
       $product-card-hover-shadow:            0 0 0 2px rgba($accent-color, .7) inset  !default;
 
       $product-card-badge-sale-bg:           #ff3333                                  !default;
-      $product-card-badge-sale-color:        #fff                                     !default;
-      $product-card-badge-new-bg:            #c7c409                                  !default;
-      $product-card-badge-new-color:         #fff                                     !default;
+      $product-card-badge-sale-color:        #DADADA                                     !default;
+      $product-card-badge-new-bg:            #FED13C                                  !default;
+      $product-card-badge-new-color:         #DADADA                                     !default;
       $product-card-badge-hot-bg:            #614ba6                                  !default;
-      $product-card-badge-hot-color:         #fff                                     !default;
+      $product-card-badge-hot-color:         #DADADA                                     !default;
 
       $product-card-quickview-color:         #ccc                                     !default;
       $product-card-quickview-default-bg:    $accent-color                            !default;
@@ -760,7 +760,7 @@
       $rating-legend-font-color:         #b3b3b3                           !default;
       $rating-star-default-color:        #ccc                              !default;
       $rating-star-default-stroke-color: rgba(#000, .08)                   !default;
-      $rating-star-active-color:         #ffd333                           !default;
+      $rating-star-active-color:         #FED13C                           !default;
       $rating-star-active-stroke-color:  $rating-star-default-stroke-color !default;
 
    // ----------------------------------------
@@ -769,12 +769,12 @@
       $select2-scheme: () !default;
       $select2-scheme: map_merge((
          // normal
-         normal-bg-color:     #fff,
+         normal-bg-color:     #DADADA,
          normal-font-color:   #495057,
          normal-border-color: #ced4da,
          normal-box-shadow:   none,
          // focus
-         focus-border-color:  #c5da0a,
+         focus-border-color:  #FED13C,
          focus-box-shadow:    0 0 0 0.2rem rgba(188, 221, 3, 0.25),
          // disabled
          disabled-bg-color:   #e9ecef,
@@ -783,19 +783,19 @@
    // ----------------------------------------
    // -- .select2-dropdown
    // ----------------------------------------
-      $select2-dropdown-bg:                          #fff                                                !default;
+      $select2-dropdown-bg:                          #DADADA                                                !default;
       $select2-dropdown-shadow:                      0 1px 20px rgba(#000, .2), 0 1px 5px rgba(#000, .1) !default;
       $select2-dropdown-divider:                     #e5e5e5                                             !default;
       $select2-dropdown-item-selected-bg-color:      #f2f2f2                                             !default;
       $select2-dropdown-item-highlighted-bg-color:   #d9ecff                                             !default;
-      $select2-dropdown-item-highlighted-font-color: #a1a30f                                             !default;
+      $select2-dropdown-item-highlighted-font-color: #FED13C                                             !default;
 
    // ----------------------------------------
    // -- .share-links
    // ----------------------------------------
-      $share-links-font-color:     #fff                           !default;
-      $share-links-like-color:     #b2cf0e                        !default;
-      $share-links-tweet-color:    #dad72b                        !default;
+      $share-links-font-color:     #DADADA                           !default;
+      $share-links-like-color:     #FED13C                        !default;
+      $share-links-tweet-color:    #FED13C                        !default;
       $share-links-pin-color:      #e63939                        !default;
       $share-links-counter-color:  #737373                        !default;
       $share-links-counter-shadow: inset 0 0 0 1px rgba(#000, .2) !default;
@@ -805,14 +805,14 @@
    // ----------------------------------------
       $social-links: () !default;
       $social-links: map_merge((
-         facebook:  (bg-color: #3c5a99, font-color: #fff),
-         twitter:   (bg-color: #00a2e8, font-color: #fff),
-         youtube:   (bg-color: #e52e2e, font-color: #fff),
-         instagram: (bg-color: #815dc7, font-color: #fff),
-         rss:       (bg-color: #ffc338, font-color: #3d464d),
+         facebook:  (bg-color: #3c5a99, font-color: #DADADA),
+         twitter:   (bg-color: #00a2e8, font-color: #DADADA),
+         youtube:   (bg-color: #e52e2e, font-color: #DADADA),
+         instagram: (bg-color: #815dc7, font-color: #DADADA),
+         rss:       (bg-color: #FED13C, font-color: #3d464d),
       ), $social-links);
       $social-links-bg-color:   #000 !default;
-      $social-links-font-color: #fff !default;
+      $social-links-font-color: #DADADA !default;
 
    // ----------------------------------------
    // -- .tags
@@ -866,7 +866,7 @@
    // ----------------------------------------
    // -- .category-card
    // ----------------------------------------
-      $category-card-bg:                 #fff                        !default;
+      $category-card-bg:                 #DADADA                        !default;
       $category-card-shadow:             0 1px 16px rgba(#000, .04)  !default;
       $category-card-links-font-color:   $light-opposite-alt-color   !default;
       $category-card-counter-font-color: $light-opposite-muted-color !default;
@@ -900,7 +900,7 @@
    // ----------------------------------------
    // -- .quickview
    // ----------------------------------------
-      $quickview-bg:                  #fff    !default;
+      $quickview-bg:                  #DADADA    !default;
       $quickview-close-default-color: #bfbfbf !default;
       $quickview-close-hover-color:   #808080 !default;
 
@@ -982,7 +982,7 @@
       $block-finder-font-color:                 $body-font-color                                     !default;
       $block-finder-font-alt-color:             $body-font-alt-color                                 !default;
       // select normal
-      $block-finder-select-bg-color:            #fff                                                 !default;
+      $block-finder-select-bg-color:            #DADADA                                                 !default;
       $block-finder-select-font-color:          $light-opposite-color                                !default;
       $block-finder-select-arrow-color:         rgba(#000, .5)                                       !default;
       $block-finder-select-shadow:              0 1px 5px rgba(#000, .09), 0 0 0 1px rgba(#000, .03) !default;
@@ -1001,12 +1001,12 @@
    // ----------------------------------------
    // -- .block-products-carousel
    // ----------------------------------------
-      $block-products-carousel-preloader-bg: rgba(#fff, .9) !default;
+      $block-products-carousel-preloader-bg: rgba(#DADADA, .9) !default;
 
    // ----------------------------------------
    // -- .block-slideshow
    // ----------------------------------------
-      $block-slideshow-dots-bg:           #fff          !default;
+      $block-slideshow-dots-bg:           #DADADA          !default;
       $block-slideshow-dot-default-color: #e0e0e0       !default;
       $block-slideshow-dot-hover-color:   #d1d1d1       !default;
       $block-slideshow-dot-active-color:  $accent-color !default;

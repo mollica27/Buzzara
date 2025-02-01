@@ -4,7 +4,7 @@
         <div v-if="layout === 'default'" class="site-header__middle container">
             <div class="site-header__logo">
                 <AppLink to="/">
-                    <img :src="LogoPng" alt="Logo" />
+                    <img :src="LogoPng" class="logo-header" alt="Logo" />
                 </AppLink>
             </div>
             <div class="site-header__search">
