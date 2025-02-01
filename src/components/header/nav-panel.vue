@@ -12,12 +12,7 @@
                     <img :src="LogoPng" alt="Logo" />
                 </AppLink>
                 </div>
-
-                <div v-if="layout === 'default'" class="nav-panel__departments">
-                    <Departments ref="departments" @onSetArea="onSetDepartmentsArea" />
-                </div>
-
-                <!-- .nav-links -->
+             <!-- .nav-links -->
                 <NavLinks ref="nav" class="nav-panel__nav-links" />
                 <!-- .nav-links / end -->
 

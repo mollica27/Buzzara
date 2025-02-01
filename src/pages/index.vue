@@ -1,22 +1,20 @@
 <template>
     <div>
-        <BlockSlideshow layout="with-departments" />
-
-        <BlockFeatures />
+       
 
         <BlockProductsCarouselContainer
             v-slot="{ products, isLoading, tabs, handleTabChange }"
             :tabs="[
-                { id: 1, name: 'All', categorySlug: undefined },
-                { id: 2, name: 'Power Tools', categorySlug: 'power-tools' },
-                { id: 3, name: 'Hand Tools', categorySlug: 'hand-tools' },
-                { id: 4, name: 'Plumbing', categorySlug: 'plumbing' }
+                { id: 1, name: 'Todos', categorySlug: undefined },
+                { id: 2, name: 'Mulheres', categorySlug: 'Mulheres' },
+                { id: 3, name: 'Homens', categorySlug: 'Homens' },
+                { id: 4, name: 'Trans', categorySlug: 'Trans' }
             ]"
             :initial-data="featuredProducts"
             :data-source="featuredProductsSource"
         >
             <BlockProductsCarousel
-                title="Featured Products"
+                title="Em destaques"
                 layout="grid-4"
                 :products="products"
                 :loading="isLoading"
@@ -28,14 +26,14 @@
         <BlockBanner />
 
         <BlockProducts
-            title="Bestsellers"
+            title="Mais Procurados"
             layout="large-first"
             :featured-product="(bestsellers || [])[0]"
             :products="(bestsellers || []).slice(1, 7)"
         />
 
         <BlockCategories
-            title="Popular Categories"
+            title="Popular"
             layout="classic"
             :categories="categories"
         />
@@ -43,16 +41,16 @@
         <BlockProductsCarouselContainer
             v-slot="{ products, isLoading, tabs, handleTabChange }"
             :tabs="[
-                { id: 1, name: 'All', categorySlug: undefined },
-                { id: 2, name: 'Power Tools', categorySlug: 'power-tools' },
-                { id: 3, name: 'Hand Tools', categorySlug: 'hand-tools' },
-                { id: 4, name: 'Plumbing', categorySlug: 'plumbing' }
+                { id: 1, name: 'Todos', categorySlug: undefined },
+                { id: 2, name: 'Mulheres', categorySlug: 'Mulheres' },
+                { id: 3, name: 'Homens', categorySlug: 'Homens' },
+                { id: 4, name: 'Trans', categorySlug: 'Trans' }
             ]"
             :initial-data="latestProducts"
             :data-source="latestProductsSource"
         >
             <BlockProductsCarousel
-                title="New Arrivals"
+                title="Novidades"
                 layout="horizontal"
                 :rows="2"
                 :products="products"
@@ -63,7 +61,7 @@
         </BlockProductsCarouselContainer>
 
         <BlockPosts
-            title="Latest News"
+            title="Mais Recentes"
             layout="list"
             :posts="posts"
         />
@@ -103,9 +101,9 @@ async function loadColumns (shopApi: ShopApi) {
     const bestsellers = shopApi.getPopularProducts({ limit: 3 })
 
     return [
-        { title: 'Top Rated Products', products: await topRated },
-        { title: 'Special Offers', products: await specialOffers },
-        { title: 'Bestsellers', products: await bestsellers }
+        { title: 'Mais avaliados', products: await topRated },
+        { title: 'Ofertas Especiais', products: await specialOffers },
+        { title: 'Mais Procurados', products: await bestsellers }
     ]
 }
 

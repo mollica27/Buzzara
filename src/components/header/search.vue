@@ -19,7 +19,7 @@
                     @focus="onCategoryFocus"
                 >
                     <option value="">
-                        All Categories
+                        Todas as Cidades
                     </option>
                     <option
                         v-for="category in categories"
@@ -33,7 +33,7 @@
                     ref="input"
                     class="search__input"
                     name="search"
-                    placeholder="Search over 10,000 products"
+                    placeholder="Buscar em todas as cidades..."
                     aria-label="Site search"
                     type="text"
                     autocomplete="off"
