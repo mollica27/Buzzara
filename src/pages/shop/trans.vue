@@ -16,7 +16,7 @@ import ShopPageCategory from '~/components/shop/shop-page-category.vue'
         const filters = parseQueryFilters(query as ParsedQuery)
 
         await store.dispatch('shop/init', {
-            categorySlug: 'power-tools',
+            categorySlug: 'Trans',
             options,
             filters
         })

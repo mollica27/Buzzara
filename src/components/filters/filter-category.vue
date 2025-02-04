@@ -8,7 +8,7 @@
             >
                 <ArrowRoundedLeft6x9Svg class="filter-categories__arrow" />
                 <AppLink :to="$url.catalog()">
-                    All Products
+                    Todos Anúncios
                 </AppLink>
             </li>
 

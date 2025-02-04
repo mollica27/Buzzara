@@ -1,13 +1,12 @@
 import { Vue, Component } from 'vue-property-decorator'
 import { INav, INavLink } from '~/interfaces/menus/nav'
 import Menu from '~/components/header/menu.vue'
-import Megamenu from '~/components/header/megamenu.vue'
 import AppLink from '~/components/shared/app-link.vue'
 import ArrowRoundedDown9x6Svg from '~/svg/arrow-rounded-down-9x6.svg'
 import headerNavigation from '~/data/headerNavigation'
 
 @Component({
-    components: { AppLink, Megamenu, Menu, ArrowRoundedDown9x6Svg }
+    components: { AppLink, Menu, ArrowRoundedDown9x6Svg }
 })
 export default class NavLinks extends Vue {
     items: INav = headerNavigation

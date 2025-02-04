@@ -6,13 +6,13 @@ const getId = makeIdGenerator()
 
 const categoriesDef: ICategoryDef[] = [
     {
-        name: 'Instruments',
-        slug: 'instruments',
+        name: 'Anuncios',
+        slug: 'Anuncios',
         items: 272,
         children: [
             {
-                name: 'Power Tools',
-                slug: 'power-tools',
+                name: 'Mulheres',
+                slug: 'Mulheres',
                 image: 'assets/images/categories/category-1.jpg',
                 items: 370,
                 children: [
@@ -54,8 +54,8 @@ const categoriesDef: ICategoryDef[] = [
                 ]
             },
             {
-                name: 'Hand Tools',
-                slug: 'hand-tools',
+                name: 'Homens',
+                slug: 'Homens',
                 image: 'assets/images/categories/category-2.jpg',
                 items: 134,
                 children: [
@@ -87,8 +87,8 @@ const categoriesDef: ICategoryDef[] = [
                 ]
             },
             {
-                name: 'Machine Tools',
-                slug: 'machine-tools',
+                name: 'Trans',
+                slug: 'Trans',
                 image: 'assets/images/categories/category-3.jpg',
                 items: 302,
                 children: [
@@ -119,137 +119,10 @@ const categoriesDef: ICategoryDef[] = [
                     }
                 ]
             },
-            {
-                name: 'Power Machinery',
-                slug: 'power-machinery',
-                image: 'assets/images/categories/category-4.jpg',
-                items: 79,
-                children: [
-                    {
-                        name: 'Generators',
-                        slug: 'generators',
-                        items: 23
-                    },
-                    {
-                        name: 'Compressors',
-                        slug: 'compressors',
-                        items: 76
-                    },
-                    {
-                        name: 'Winches',
-                        slug: 'winches',
-                        items: 43
-                    },
-                    {
-                        name: 'Plasma Cutting',
-                        slug: 'plasma-cutting',
-                        items: 128
-                    },
-                    {
-                        name: 'Electric Motors',
-                        slug: 'electric-motors',
-                        items: 76
-                    }
-                ]
-            },
-            {
-                name: 'Measurement',
-                slug: 'measurement',
-                image: 'assets/images/categories/category-5.jpg',
-                items: 366,
-                children: [
-                    {
-                        name: 'Tape Measure',
-                        slug: 'tape-measure',
-                        items: 57
-                    },
-                    {
-                        name: 'Theodolites',
-                        slug: 'theodolites',
-                        items: 5
-                    },
-                    {
-                        name: 'Thermal Imagers',
-                        slug: 'thermal-imagers',
-                        items: 3
-                    },
-                    {
-                        name: 'Calipers',
-                        slug: 'calipers',
-                        items: 37
-                    },
-                    {
-                        name: 'Levels',
-                        slug: 'levels',
-                        items: 14
-                    }
-                ]
-            },
-            {
-                name: 'Clothes and PPE',
-                slug: 'clothes-and-ppe',
-                image: 'assets/images/categories/category-6.jpg',
-                items: 82,
-                children: [
-                    {
-                        name: 'Winter Workwear',
-                        slug: 'winter-workwear',
-                        items: 24
-                    },
-                    {
-                        name: 'Summer Workwear',
-                        slug: 'summer-workwear',
-                        items: 87
-                    },
-                    {
-                        name: 'Helmets',
-                        slug: 'helmets',
-                        items: 9
-                    },
-                    {
-                        name: 'Belts and Bags',
-                        slug: 'belts-and-bags',
-                        items: 1
-                    },
-                    {
-                        name: 'Work Shoes',
-                        slug: 'work-shoes',
-                        items: 0
-                    }
-                ]
-            }
+           
         ]
     },
-    {
-        name: 'Electronics',
-        slug: 'electronics',
-        items: 54
-    },
-    {
-        name: 'Computers',
-        slug: 'computers',
-        items: 421
-    },
-    {
-        name: 'Automotive',
-        slug: 'automotive',
-        items: 182
-    },
-    {
-        name: 'Furniture & Appliances',
-        slug: 'furniture-appliances',
-        items: 15
-    },
-    {
-        name: 'Music & Books',
-        slug: 'music-books',
-        items: 89
-    },
-    {
-        name: 'Health & Beauty',
-        slug: 'health-beauty',
-        items: 201
-    }
+   
 ]
 
 type MakeFn<T extends IBaseCategory = IBaseCategory> = (def: ICategoryDef) => T;

@@ -10,11 +10,8 @@
             <div class="site-header__search">
                 <Search location="header" />
             </div>
-            <div class="site-header__phone">
-                <div class="site-header__phone-title">Customer Service</div>
-                <div class="site-header__phone-number">
-                    {{ theme.contacts.phone }}
-                </div>
+            <div class="site-header__login">
+                <AppLink to="/account/login" class="btn-login btn-sm btn-secondary">Login</AppLink>    
             </div>
         </div>
 

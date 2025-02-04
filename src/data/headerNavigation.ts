@@ -7,15 +7,15 @@ const dataHeaderNavigation: INav = [
     },
     {
         title: 'Mulheres',
-        url: '/shop/category-grid-3-columns-sidebar',
+        url: '/shop/mulheres',
     },
     {
         title: 'Homens',
-        url: '/shop/category-grid-3-columns-sidebar',
+        url: '/shop/homens',
     },
     {
         title: 'Trans',
-        url: '/shop/category-grid-3-columns-sidebar',
+        url: '/shop/trans',
     },
     // {
     //     title: 'Acompanhantes',

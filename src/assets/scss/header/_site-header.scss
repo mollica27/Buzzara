@@ -46,7 +46,7 @@
 .site-header__search {
     flex-grow: 1;
 }
-.site-header__phone {
+.site-header__login {
     line-height: 1;
     flex-shrink: 0;
 
@@ -55,14 +55,26 @@
         #{$margin-inline-start}: 80px;
     }
 }
-.site-header__phone-title {
+.site-header__login-title {
     font-size: 14px;
     color: $header-font-muted-color;
     margin-bottom: 6px;
 }
-.site-header__phone-number {
-    font-size: 20px;
-    font-weight: $font-weight-bold;
+.btn-login {
+    font-size: 16px;
+    font-weight: 500;
+    color: $light-opposite-color;
+    background: $light-color;
+    border: 2px solid $light-opposite-color;
+    border-radius: 4px;
+    padding: 8px 16px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+    &:hover {
+        background: $light-color;
+        border-color: $link-color;
+        color: $link-color;
+    }
 }
 .site-header__nav-panel {
     height: $nav-panel-height;
